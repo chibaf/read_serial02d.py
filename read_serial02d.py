@@ -40,6 +40,7 @@ while True:
     plot(x, y)
     pause(0.05)
     itime=itime+1
+    data=[]
   except KeyboardInterrupt:
     print ('exiting')
     break
