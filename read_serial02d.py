@@ -33,7 +33,7 @@ while True:
       print(str(sec)+":"+f1)
     f.write(str(sec)+", "+f1+"\n")
     x=range(0, 100, 1)
-    y.insert(0, data[6])
+    y.insert(0, data[6])  # Tc No.6
     y.pop(100)
     clf()
     ylim(0, 1000)
