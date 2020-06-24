@@ -33,12 +33,12 @@ while True:
       print(str(sec)+":"+f1)
     f.write(str(sec)+", "+f1+"\n")
     x=range(0, 100, 1)
-    y.insert(0, data[1])
+    y.insert(0, data[6])
     y.pop(100)
     clf()
-    ylim(0, 200)
+    ylim(0, 1000)
     plot(x, y)
-    pause(0.05)
+    pause(0.05) 
     itime=itime+1
     data=[]
   except KeyboardInterrupt:
