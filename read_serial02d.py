@@ -3,7 +3,7 @@ import re
 from pylab import *
 
 strPort = sys.argv[2]   # serial port
-ser=serial.Serial(strPort, 115200)
+ser=serial.Serial(strPort,115200) #20200627 115200->19200
 print("connected to: " + ser.portstr)
 
 file=sys.argv[1]  # file name
@@ -33,7 +33,7 @@ while True:
       print(str(sec)+":"+f1)
     f.write(str(sec)+", "+f1+"\n")
     x=range(0, 100, 1)
-    y.insert(0, data[6])  # Tc No.6
+    y.insert(0, data[3])  # Tc No.6
     y.pop(100)
     clf()
     ylim(0, 1000)
@@ -41,7 +41,9 @@ while True:
     pause(0.05) 
     itime=itime+1
     data=[]
+    ser.flush()
   except KeyboardInterrupt:
+    print(str(line))
     print ('exiting')
     break
 ser.flush()
